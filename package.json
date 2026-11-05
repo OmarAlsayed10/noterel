@@ -1,0 +1,49 @@
+{
+  "name": "kestrel-brain-mobile",
+  "version": "0.3.19-beta.1",
+  "main": "index.ts",
+  "dependencies": {
+    "expo": "~57.0.20",
+    "expo-camera": "~57.0.4",
+    "expo-clipboard": "~57.0.1",
+    "expo-constants": "~57.0.17",
+    "expo-crypto": "~57.0.2",
+    "expo-document-picker": "~57.0.1",
+    "expo-file-system": "~57.0.6",
+    "expo-linking": "~57.0.9",
+    "expo-screen-capture": "~57.0.2",
+    "expo-secure-store": "~57.0.3",
+    "expo-share-intent": "8.0.1",
+    "expo-sharing": "~57.0.18",
+    "expo-sqlite": "~57.0.2",
+    "expo-status-bar": "~57.0.1",
+    "expo-system-ui": "~57.0.3",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "eslint": "^9.39.2",
+    "eslint-config-expo": "^57.0.2",
+    "typescript": "~6.0.3",
+    "vitest": "5.0.0"
+  },
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "npm run prebuild:public && node scripts/expo-edition.mjs public run:android",
+    "android:internal": "npm run prebuild:internal && node scripts/expo-edition.mjs internal run:android",
+    "prebuild:public": "node scripts/expo-edition.mjs public prebuild --clean --platform android",
+    "prebuild:internal": "node scripts/expo-edition.mjs internal prebuild --clean --platform android",
+    "release:owner:apk": "node scripts/android-release.mjs public apk",
+    "release:user:apk": "node scripts/android-release.mjs internal apk",
+    "release:user:aab": "node scripts/android-release.mjs internal aab",
+    "lint": "expo lint",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm run lint && npm test",
+    "test": "vitest run"
+  },
+  "private": true,
+  "type": "module"
+}

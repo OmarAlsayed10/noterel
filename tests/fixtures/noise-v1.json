@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "vectors": [
+    {
+      "name": "pairing-xk",
+      "pattern": "Noise_XK_25519_ChaChaPoly_BLAKE2s",
+      "initiatorStaticPrivate": "2222222222222222222222222222222222222222222222222222222222222222",
+      "responderStaticPrivate": "1111111111111111111111111111111111111111111111111111111111111111",
+      "responderStaticPublic": "7b4e909bbe7ffe44c465a220037d608ee35897d31ef972f07f74892cb0f73f13",
+      "initiatorEphemeralPrivate": "3333333333333333333333333333333333333333333333333333333333333333",
+      "responderEphemeralPrivate": "4444444444444444444444444444444444444444444444444444444444444444",
+      "handshakePayloads": [
+        "",
+        "",
+        "70616972696e67207061796c6f6164"
+      ],
+      "handshakeMessages": [
+        "7b0d47d93427f8311160781c7c733fd89f88970aef490d8aa0ee19a4cb8a1b140e1228e5bd96e05ddbd709771414bd7a",
+        "ff2ee45601ec1b67310c7790404585ae697331eee1c1f8cf2419731c1fff3e6b29f1bc34eb979de317a1655830fb85d0",
+        "1016bb9b2ca503b63b5aeb895987e4b98396eb597a6fafc3405d63b672a4fe670671469cebdb4be4be2705d7efcf183d575dfc974fdb6124f826b41a4b304af7566c98116a99a2b256b017ba624ced"
+      ],
+      "initiatorTransportMessages": [
+        {
+          "plaintext": "6d6f62696c652072657175657374",
+          "message": "a3fe0415219b3a5b16beb9c8773746018260f3754fbaffe501115b97b2b9"
+        },
+        {
+          "plaintext": "6d6f62696c6520726571756573742074776f",
+          "message": "35e66e8a7334f8fd957d75ac31d0d2681889562b84520bf4ed3c8d6dbc7a5f84ace0"
+        }
+      ],
+      "responderTransportMessages": [
+        {
+          "plaintext": "6465736b746f7020726573706f6e7365",
+          "message": "7ca33a4dd7cb9aebd60391a33243871f097d17a5fc2718b7672d759ec6ff090e"
+        },
+        {
+          "plaintext": "6465736b746f7020726573706f6e73652074776f",
+          "message": "465ddc19287e7930b2dbc7f2d0eaf52df3f7d64ca0ea8a4ebc2cab86a9342b79d4df28f7"
+        }
+      ]
+    },
+    {
+      "name": "returning-device-ik",
+      "pattern": "Noise_IK_25519_ChaChaPoly_BLAKE2s",
+      "initiatorStaticPrivate": "2222222222222222222222222222222222222222222222222222222222222222",
+      "responderStaticPrivate": "1111111111111111111111111111111111111111111111111111111111111111",
+      "responderStaticPublic": "7b4e909bbe7ffe44c465a220037d608ee35897d31ef972f07f74892cb0f73f13",
+      "initiatorEphemeralPrivate": "5555555555555555555555555555555555555555555555555555555555555555",
+      "responderEphemeralPrivate": "6666666666666666666666666666666666666666666666666666666666666666",
+      "handshakePayloads": [
+        "",
+        "61757468656e74696361746564"
+      ],
+      "handshakeMessages": [
+        "38ab664bd86f77d7e66bdd9ae0792913a94fd8b33a1260027e4b46c1f4884c671fb9318f9e992f4e4c40c857a1fb9cbb0c086b12d181897ed06943273253b9d4e4367eb5727d39adc640f5c05b75fbf689606e0fbcd19edf9d606ece33d76aad",
+        "219e4d800da968d2a5fcb009c784f4746c7138edb9ee4844b739e830b05cf42482286598c01af9cc4c989c4bc92bfbb8e164ca5df8a75baf5b96f2be58"
+      ],
+      "initiatorTransportMessages": [
+        {
+          "plaintext": "6d6f62696c652072657175657374",
+          "message": "b9cad7f11b3f92cb13b71648df1ac6c97a149d50fcab15453cead72e35a7"
+        },
+        {
+          "plaintext": "6d6f62696c6520726571756573742074776f",
+          "message": "ef2f63a41e36d7a4de5e718e1c543449f8e90f9c77dc3b53cb9b60e38828a89c4dd9"
+        }
+      ],
+      "responderTransportMessages": [
+        {
+          "plaintext": "6465736b746f7020726573706f6e7365",
+          "message": "222971f4661e54a37b8b8f22f2c8720832211541ebd3f0aec3a4b97bc18dcdea"
+        },
+        {
+          "plaintext": "6465736b746f7020726573706f6e73652074776f",
+          "message": "ec504444335962c451a1daf79fd0a60e9d84c189cb585461e544a12010d1fb1b17834cfc"
+        }
+      ]
+    }
+  ]
+}

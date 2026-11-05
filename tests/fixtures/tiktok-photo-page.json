@@ -1,0 +1,25 @@
+{
+  "__DEFAULT_SCOPE__": {
+    "webapp.reflow.video.detail": {
+      "itemInfo": {
+        "itemStruct": {
+          "id": "7492787649518767378",
+          "desc": "اللهم ف حسن تدبيرك مايغني عن الحيل وف كرمك ماهو فوق الامل وفي حلمك مايسد الخلل وف عفوك مايحمي الزلل",
+          "author": {
+            "uniqueId": "bgeiksh",
+            "nickname": "اذكر الله"
+          },
+          "imagePost": {
+            "images": [
+              {}
+            ]
+          },
+          "video": {
+            "duration": 0,
+            "subtitleInfos": []
+          }
+        }
+      }
+    }
+  }
+}

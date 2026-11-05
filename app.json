@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "Kestrel Mobile",
+    "slug": "kestrel-brain-mobile",
+    "version": "0.3.19-beta.1",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "scheme": "kestrel-mobile",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.kestrelbrain.mobile",
+      "versionCode": 25,
+      "adaptiveIcon": {
+        "backgroundColor": "#fffdf7",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+        "android.permission.REQUEST_INSTALL_PACKAGES"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": false
+        }
+      ],
+      [
+        "expo-sqlite",
+        {
+          "useSQLCipher": true
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow this app to scan a pairing code.",
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": true
+        }
+      ],
+      [
+        "expo-share-intent",
+        {
+          "disableIOS": true,
+          "disableAndroid": true
+        }
+      ],
+      "./plugins/withAndroidArchitectures.cjs",
+      "./plugins/withAndroidSourceProcessingRuntime.cjs",
+      "./plugins/withAndroidReleaseSigning.cjs",
+      "./plugins/withAndroidSecurity.cjs",
+      "./plugins/withAndroidTextCapture.cjs",
+      "expo-sharing"
+    ],
+    "extra": {
+      "updateManifestUrl": "https://github.com/OmarAlsayed10/kestrel-brain-mobile/releases/latest/download/latest.json"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'com.kestrelbrain.noise'
+version = '0.1.0'
+
+android {
+  namespace 'com.kestrelbrain.noise'
+  defaultConfig {
+    versionCode 1
+    versionName '0.1.0'
+  }
+}
+
+def rustSource = file('../native')
+def rustLibraries = file('src/main/jniLibs')
+
+tasks.register('buildRustNoise', Exec) {
+  environment 'ANDROID_NDK_HOME', file("${android.sdkDirectory}/ndk/${rootProject.ext.ndkVersion}")
+  workingDir rustSource
+  commandLine 'cargo', 'ndk', '-t', 'arm64-v8a', '-t', 'armeabi-v7a', '-t', 'x86', '-t', 'x86_64', '-o', rustLibraries, 'build', '--release'
+}
+
+tasks.named('preBuild').configure {
+  dependsOn tasks.named('buildRustNoise')
+}

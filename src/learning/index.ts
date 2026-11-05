@@ -1,0 +1,5 @@
+export { emptyLearningDetails, learningDetailsSchema, learningIdentityKey } from './schema'
+export type { LearningAnnotation, LearningDetails, LearningEnvelope, MemoryIdentity, MemoryLearningEntry } from './schema'
+export { canonicalMemoryIdentity, importLearningDetails, learningIndex, memoryLearning, rebindLearningIdentity, removeMemoryLearning, removeMemoryLearningInDatabase, saveMemoryLearning } from './repository'
+export { resolveLearningConflict, syncLearningEntries, synchronizedLearningIdentity } from './sync'
+export type { LearningSyncOutcome } from './sync'
